@@ -1,33 +1,30 @@
 :root{
-  --bg: #f3f5f7;
-  --text: #121417;
-  --muted: #5c6670;
-  --card: #ffffff;
-  --shadow: 0 8px 20px rgba(0,0,0,.08);
-  --wa: #1f7a4f;
+  --bg:#f3f5f7;
+  --text:#121417;
+  --muted:#5c6670;
+  --shadow:0 8px 20px rgba(0,0,0,.08);
+  --wa:#1f7a4f;
   --wa2:#1a6a45;
-  --cta: #2f7a4f;
+  --cta:#2f7a4f;
   --yellow:#f3b014;
   --yellow2:#eaa10a;
 }
 
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box;}
 
 body{
   margin:0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family:system-ui, Arial;
   background:var(--bg);
   color:var(--text);
 }
 
 .container{
-  width:min(1120px, 92vw);
-  margin:0 auto;
+  width:min(1120px,92vw);
+  margin:auto;
 }
 
-/* ================= TOP BAR ================= */
+/* TOPBAR */
 
 .topbar{
   background:white;
@@ -44,14 +41,11 @@ body{
 .brand__logo{
   font-weight:900;
   font-size:28px;
-  letter-spacing:.5px;
 }
 
-.brand__logo span{
-  color:var(--yellow);
-}
+.brand__logo span{color:var(--yellow);}
 
-/* ================= BUTTONS ================= */
+/* BOTONES */
 
 .btn{
   border:0;
@@ -63,50 +57,30 @@ body{
   font-weight:700;
   border-radius:10px;
   padding:12px 16px;
-  transition:.2s;
 }
 
-.btn--wa{
-  background:var(--wa);
-  color:white;
-}
-
-.btn--wa:hover{
-  background:var(--wa2);
-}
+.btn--wa{background:var(--wa);color:white;}
+.btn--wa:hover{background:var(--wa2);}
 
 .btn--cta{
   background:var(--cta);
   color:white;
   padding:14px 18px;
-  border-radius:12px;
-}
-
-.btn--cta:hover{
-  opacity:.9;
 }
 
 .btn--card{
   background:var(--yellow);
-  color:#111;
-  width:140px;
+  width:170px;
   justify-content:center;
 }
 
-.btn--card:hover{
-  background:var(--yellow2);
-}
+.btn--card:hover{background:var(--yellow2);}
 
-.btn--wide{
-  width:100%;
-  justify-content:center;
-}
-
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
   position:relative;
-  height:340px;
+  height:360px;
   display:grid;
   place-items:center;
   overflow:hidden;
@@ -117,8 +91,8 @@ body{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.25)),
-    url("https://agroclan.es/wp-content/uploads/robot-desbrozador-a-distancia-agria-9600-agroclan.jpg");
+    linear-gradient(90deg,rgba(0,0,0,.55),rgba(0,0,0,.25)),
+    url(assets/images/portada.png);
   background-size:cover;
   background-position:center;
 }
@@ -126,31 +100,29 @@ body{
 .hero__content{
   position:relative;
   color:white;
-  text-align:left;
 }
 
 .hero h1{
-  margin:0 0 10px;
-  font-size: clamp(34px, 4vw, 56px);
+  font-size:52px;
   line-height:1.05;
+  margin:0 0 10px;
 }
 
 .hero p{
-  margin:0 0 18px;
   font-size:18px;
-  color:rgba(255,255,255,.9);
+  margin-bottom:18px;
 }
 
-/* ================= GRID ================= */
+/* GRID */
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(2, 1fr);
+  grid-template-columns:repeat(2,1fr);
   gap:24px;
   padding-bottom:40px;
 }
 
-/* ================= CARD ================= */
+/* CARD */
 
 .card{
   background:white;
@@ -161,156 +133,116 @@ body{
   flex-direction:column;
 }
 
-/* CONTENEDOR IMAGEN (FIX SOLAPAMIENTO) */
+/* SLIDER */
 
-.card__imgwrap{
-  background:white;
+.slider{
+  position:relative;
   height:260px;
   display:flex;
   align-items:center;
   justify-content:center;
-  padding:20px;
+  background:white;
   border-bottom:1px solid rgba(0,0,0,.05);
 }
 
-/* IMAGEN LIMPIA */
-
-.card img{
+.slider img{
   max-width:100%;
   max-height:100%;
   object-fit:contain;
 }
 
-/* CUERPO TEXTO */
+.arrow{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,.6);
+  color:white;
+  border:none;
+  font-size:22px;
+  padding:10px 14px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.arrow.left{left:10px;}
+.arrow.right{right:10px;}
+
+.arrow:hover{background:black;}
+
+/* BODY */
 
 .card__body{
   padding:20px;
-  background:white;
 }
-
-/* TITULO */
 
 .card h3{
-  margin:0 0 8px;
+  margin-bottom:8px;
   font-size:20px;
   font-weight:800;
-  line-height:1.2;
 }
-
-/* SUBTEXTO */
 
 .card__meta{
   color:var(--muted);
-  margin-bottom:14px;
-  font-size:14px;
+  margin-bottom:10px;
 }
 
-/* ================= FOOTER ================= */
+/* VARIANTES */
+
+.variants{
+  display:flex;
+  gap:10px;
+  margin-bottom:12px;
+}
+
+.variant{
+  flex:1;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  background:white;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.variant.active{
+  background:var(--yellow);
+  border-color:var(--yellow);
+}
+
+.variant:hover{
+  border-color:var(--yellow);
+}
+
+/* PRECIO */
+
+.price{
+  font-size:22px;
+  font-weight:900;
+  margin-bottom:14px;
+}
+
+/* FOOTER */
 
 .footer{
   background:white;
   border-top:1px solid rgba(0,0,0,.06);
-  padding:18px 0;
 }
 
 .footer__inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  gap:12px;
+  padding:18px 0;
 }
 
 .footer__text{
-  color:var(--muted);
   font-size:14px;
-}
-
-/* ================= MODAL ================= */
-
-.modal{
-  position:fixed;
-  inset:0;
-  display:none;
-  z-index:2000;
-}
-
-.modal.is-open{
-  display:block;
-}
-
-.modal__backdrop{
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.55);
-}
-
-.modal__panel{
-  position:relative;
-  width:min(560px, 92vw);
-  margin:8vh auto;
-  background:white;
-  border-radius:16px;
-  box-shadow:0 20px 60px rgba(0,0,0,.25);
-  overflow:hidden;
-}
-
-.modal__header{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-  padding:18px;
-  border-bottom:1px solid rgba(0,0,0,.06);
-}
-
-.modal__title{
-  font-weight:900;
-  font-size:20px;
-}
-
-.modal__subtitle{
   color:var(--muted);
-  font-size:14px;
 }
 
-.modal__close{
-  border:0;
-  background:none;
-  cursor:pointer;
-  font-size:18px;
-}
-
-.modal__content{
-  padding:18px;
-}
-
-.specs{
-  padding-left:18px;
-}
-
-.specs li{
-  margin:10px 0;
-}
-
-.modal__actions{
-  padding:18px;
-}
-
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media(max-width:900px){
-
-  .grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer__inner{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .topbar__inner{
-    flex-wrap:wrap;
-    gap:10px;
-  }
-
+  .grid{grid-template-columns:1fr;}
+  .footer__inner{flex-direction:column;gap:10px;}
 }

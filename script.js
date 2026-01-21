@@ -1,38 +1,69 @@
-// Modal "Ver ficha" + WhatsApp con modelo
-const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalPrice = document.getElementById("modalPrice");
-const modalWa = document.getElementById("modalWa");
+const rojaImages = [
+  "assets/images/roja1.jpeg",
+  "assets/images/roja2.jpeg",
+  "assets/images/roja3.jpeg"
+];
 
-const WA_NUMBER = "34633897821";
+const azulImages = [
+  "assets/images/azul1.jpeg",
+  "assets/images/azul2.jpeg"
+];
 
-function openModal(model, price){
-  modalTitle.textContent = model;
-  modalPrice.textContent = price;
+let rojaIndex = 0;
+let azulIndex = 0;
 
-  const msg = `Hola, quiero información y disponibilidad de la ${model} (${price}).`;
-  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
-  modalWa.href = url;
+function nextSlide(type){
 
-  modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
+  if(type==="roja"){
+    rojaIndex = (rojaIndex+1)%rojaImages.length;
+    document.getElementById("roja-img").src = rojaImages[rojaIndex];
+  }
+
+  if(type==="azul"){
+    azulIndex = (azulIndex+1)%azulImages.length;
+    document.getElementById("azul-img").src = azulImages[azulIndex];
+  }
 }
 
-function closeModal(){
-  modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
+function prevSlide(type){
+
+  if(type==="roja"){
+    rojaIndex = (rojaIndex-1+rojaImages.length)%rojaImages.length;
+    document.getElementById("roja-img").src = rojaImages[rojaIndex];
+  }
+
+  if(type==="azul"){
+    azulIndex = (azulIndex-1+azulImages.length)%azulImages.length;
+    document.getElementById("azul-img").src = azulImages[azulIndex];
+  }
 }
 
-document.querySelectorAll(".btn--card").forEach(btn => {
-  btn.addEventListener("click", () => {
-    openModal(btn.dataset.model, btn.dataset.price);
+// VARIANTES ROJA
+
+let selectedModel = "CL-800 (80cm)";
+let selectedPrice = 4300;
+
+function setModel(model, price, el){
+
+  selectedModel = model;
+  selectedPrice = price;
+
+  document.getElementById("grappaPrice").innerText =
+    `${price} € + IVA`;
+
+  document.querySelectorAll(".variant").forEach(btn=>{
+    btn.classList.remove("active");
   });
-});
 
-modal.addEventListener("click", (e) => {
-  if (e.target.dataset.close === "true") closeModal();
-});
+  el.classList.add("active");
+}
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeModal();
-});
+// WHATSAPP
+
+function sendGrappa(){
+
+  const msg = `Hola, quiero presupuesto para la Grappa ${selectedModel} (${selectedPrice}€ + IVA)`;
+  const url = `https://wa.me/34633897821?text=${encodeURIComponent(msg)}`;
+
+  window.open(url, "_blank");
+}
