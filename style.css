@@ -1,0 +1,131 @@
+body {
+margin:0;
+font-family:Arial, sans-serif;
+background:#f1f3f6;
+}
+
+/* NAV */
+
+.navbar {
+background:#131921;
+padding:12px 20px;
+display:flex;
+align-items:center;
+gap:15px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo {
+color:white;
+font-size:22px;
+font-weight:bold;
+}
+
+.logo span {
+color:#f3a847;
+}
+
+.navbar input {
+flex:1;
+padding:8px 12px;
+border-radius:6px;
+border:none;
+outline:none;
+}
+
+/* HERO */
+
+.hero {
+background:#232f3e;
+color:white;
+text-align:center;
+padding:50px 20px;
+}
+
+/* BUTTONS */
+
+.main-btn {
+background:#ffd814;
+border:1px solid #fcd200;
+padding:14px 25px;
+font-size:18px;
+border-radius:10px;
+cursor:pointer;
+margin-top:20px;
+font-weight:bold;
+}
+
+.main-btn:hover {
+background:#f7ca00;
+}
+
+.footer-btn {
+background:#25D366;
+border:none;
+padding:12px 22px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+color:white;
+margin-bottom:10px;
+}
+
+.footer-btn:hover {
+opacity:0.85;
+}
+
+/* PRODUCTS */
+
+.products {
+padding:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card {
+background:white;
+border-radius:12px;
+padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.2s;
+}
+
+.card:hover {
+transform:translateY(-5px);
+}
+
+.card img {
+width:100%;
+border-radius:10px;
+}
+
+.card h3 {
+margin:10px 0 5px;
+}
+
+.price {
+font-size:18px;
+font-weight:bold;
+color:#b12704;
+margin-bottom:5px;
+}
+
+.card ul {
+padding-left:18px;
+font-size:14px;
+}
+
+/* FOOTER */
+
+footer {
+background:#131921;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:30px;
+}
