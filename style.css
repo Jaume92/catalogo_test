@@ -246,3 +246,16 @@ body{
   .grid{grid-template-columns:1fr;}
   .footer__inner{flex-direction:column;gap:10px;}
 }
+
+
+/* LOGO */
+
+.brand{
+  display:flex;
+  align-items:center;
+}
+
+.brand__img{
+  height:65px;
+  width:auto;
+}
