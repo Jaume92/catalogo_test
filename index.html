@@ -1,92 +1,171 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>EAAS | Catálogo Máquinas Automáticas</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PACMAQ | Desbrozadoras Automáticas</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<nav class="navbar">
-    <div class="logo">EAAS<span>SYSTEMS</span></div>
-    <input type="text" id="search" placeholder="Buscar máquina...">
-</nav>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <div class="brand__logo">PAC<span>MAQ</span></div>
 
-<header class="hero">
-    <h1>Máquinas Industriales en Modalidad EAAS</h1>
-    <p>Paga por uso · Sin inversión inicial · Soporte incluido</p>
-
-    <!-- BOTÓN PRINCIPAL -->
-    <a href="https://wa.me/34633897821?text=Hola,%20quiero%20informacion%20sobre%20sus%20maquinas%20EAAS" target="_blank">
-        <button class="main-btn">📲 Solicitar información por WhatsApp</button>
+    <a class="btn btn--wa" target="_blank"
+       href="https://wa.me/34633897821?text=Hola,%20quiero%20informaci%C3%B3n%20sobre%20sus%20desbrozadoras%20autom%C3%A1ticas">
+      🟢 Pedidos por WhatsApp
     </a>
+  </div>
 </header>
 
-<section class="products">
+<section class="hero">
+  <div class="hero__bg"></div>
+  <div class="container hero__content">
+    <h1>DESBROZADORAS<br>AUTOMÁTICAS</h1>
+    <p>Control remoto · Alto rendimiento · Trabajo en pendientes</p>
 
-<!-- MAQUINA 1 -->
-<div class="card">
-<img src="https://www.agrieuro.es/share/media/images/products/web2020-product/49913/weibang-wbgt6813-te-desbrozadora-profesional-de-martillos-radiocontrolada-de-orugas-hbrida--agrieuro_49913_2.png" alt="DX-100">
-<h3>EAAS DX-100 Compact</h3>
-<p class="price">Desde 490€/mes</p>
-<p>Solución compacta ideal para producción ligera y espacios reducidos.</p>
-<ul>
-<li>Producción: 120 piezas/hora</li>
-<li>Consumo optimizado</li>
-<li>Mantenimiento incluido</li>
-</ul>
-</div>
-
-<!-- MAQUINA 2 -->
-<div class="card">
-<img src="https://www.agrieuro.es/share/media/images/products/web2020-product/61311/blue-bird-fm-24-70-robot-desbrozador-a-control-remoto-hbrido--agrieuro_61311_1.png" alt="DX-200">
-<h3>EAAS DX-200 Industrial</h3>
-<p class="price">Desde 790€</p>
-<p>Modelo industrial para líneas de producción medias.</p>
-<ul>
-<li>Producción: 220 piezas/hora</li>
-<li>Control automático CNC</li>
-<li>Monitorización remota</li>
-</ul>
-</div>
-
-<!-- MAQUINA 3 -->
-<div class="card">
-<img src="https://www.agrieuro.es/share/media/images/products/web2020-product/63351/blue-bird-fm-24-65-robot-desbrozador-hbrido-con-control-remoto--agrieuro_63351_1.png" alt="DX-PRO">
-<h3>EAAS DX-PRO Advanced</h3>
-<p class="price">Desde 1.190€</p>
-<p>Alto rendimiento para fábricas con demanda continua.</p>
-<ul>
-<li>Producción: 350 piezas/hora</li>
-<li>Integración ERP</li>
-<li>Soporte 24/7</li>
-</ul>
-</div>
-
-<!-- MAQUINA 4 -->
-<div class="card">
-<img src="https://www.agrieuro.es/share/media/images/products/web2020-product/42414/blue-bird-fm-23-53-robot-desbrozador-a-control-remoto-hbrido--agrieuro_42414_1.png" alt="DX-MAX">
-<h3>EAAS DX-MAX Heavy Duty</h3>
-<p class="price">Desde 250$</p>
-<p>Máxima potencia para producción intensiva 24/7.</p>
-<ul>
-<li>Producción: 500 piezas/hora</li>
-<li>Estructura reforzada</li>
-<li>Contrato premium incluido</li>
-</ul>
-</div>
-
+    <a class="btn btn--cta" target="_blank"
+       href="https://wa.me/34633897821?text=Hola,%20quiero%20presupuesto%20para%20una%20desbrozadora%20autom%C3%A1tica">
+      Solicitar presupuesto por WhatsApp
+    </a>
+  </div>
 </section>
 
-<footer>
+<main class="container">
+  <section class="grid">
 
-<a href="https://wa.me/34633897821?text=Hola,%20quiero%20solicitar%20presupuesto%20para%20una%20maquina%20EAAS" target="_blank">
-    <button class="footer-btn">📲 Solicitar presupuesto por WhatsApp</button>
-</a>
+    <!-- MODELO 1 -->
+    <article class="card">
+      <div class="card__imgwrap">
+        <img
+          src="https://www.agrieuro.es/share/media/images/products/web2020-product/49913/weibang-wbgt6813-te-desbrozadora-profesional-de-martillos-radiocontrolada-de-orugas-hbrida--agrieuro_49913_2.png"
+          alt="Desbrozadora automática de orugas radiocontrolada"
+          loading="lazy"
+        />
+      </div>
 
-<p>© 2026 EAAS Systems · Soluciones industriales bajo demanda</p>
+      <div class="card__body">
+        <h3>Desbrozadora Automática de Orugas (Martillos)</h3>
+        <div class="card__meta">Radiocontrol · Ideal para terrenos difíciles · Máxima estabilidad</div>
 
+        <button class="btn btn--card"
+          data-model="Desbrozadora Automática de Orugas (Martillos)"
+          data-price="Precio bajo presupuesto">
+          Ver ficha
+        </button>
+      </div>
+    </article>
+
+    <!-- MODELO 2 -->
+    <article class="card">
+      <div class="card__imgwrap">
+        <img
+          src="https://www.agrieuro.es/share/media/images/products/web2020-product/61311/blue-bird-fm-24-70-robot-desbrozador-a-control-remoto-hbrido--agrieuro_61311_1.png"
+          alt="Robot desbrozador a control remoto"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="card__body">
+        <h3>Robot Desbrozador Automático (Control Remoto)</h3>
+        <div class="card__meta">Control remoto · Trabajo continuo · Diseñada para pendiente</div>
+
+        <button class="btn btn--card"
+          data-model="Robot Desbrozador Automático (Control Remoto)"
+          data-price="Precio bajo presupuesto">
+          Ver ficha
+        </button>
+      </div>
+    </article>
+
+    <!-- MODELO 3 -->
+    <article class="card">
+      <div class="card__imgwrap">
+        <img
+          src="https://www.agrieuro.es/share/media/images/products/web2020-product/42414/blue-bird-fm-23-53-robot-desbrozador-a-control-remoto-hbrido--agrieuro_42414_1.png"
+          alt="Desbrozadora automática híbrida radiocontrolada"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="card__body">
+        <h3>Desbrozadora Automática Híbrida (Radiocontrol)</h3>
+        <div class="card__meta">Híbrida · Menor consumo · Alta eficiencia en trabajos prolongados</div>
+
+        <button class="btn btn--card"
+          data-model="Desbrozadora Automática Híbrida (Radiocontrol)"
+          data-price="Precio bajo presupuesto">
+          Ver ficha
+        </button>
+      </div>
+    </article>
+
+    <!-- MODELO 4 -->
+    <article class="card">
+      <div class="card__imgwrap">
+        <img
+          src="https://www.agrieuro.es/share/media/images/products/web2020-product/61311/blue-bird-fm-24-70-robot-desbrozador-a-control-remoto-hbrido--agrieuro_61311_1.png"
+          alt="Desbrozadora automática heavy duty"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="card__body">
+        <h3>Desbrozadora Automática Heavy Duty</h3>
+        <div class="card__meta">Uso intensivo · Componentes reforzados · Ideal para jornadas largas</div>
+
+        <button class="btn btn--card"
+          data-model="Desbrozadora Automática Heavy Duty"
+          data-price="Precio bajo presupuesto">
+          Ver ficha
+        </button>
+      </div>
+    </article>
+
+  </section>
+</main>
+
+<!-- MODAL (igual que antes) -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__backdrop" data-close="true"></div>
+
+  <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Ficha de producto">
+    <div class="modal__header">
+      <div>
+        <div class="modal__title" id="modalTitle">Producto</div>
+        <div class="modal__subtitle" id="modalPrice">Precio bajo presupuesto</div>
+      </div>
+      <button class="modal__close" data-close="true" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="modal__content">
+      <ul class="specs">
+        <li><strong>Uso recomendado:</strong> profesional / agrícola / forestal</li>
+        <li><strong>Control:</strong> remoto (según modelo)</li>
+        <li><strong>Aplicación:</strong> maleza, hierba alta, terrenos irregulares</li>
+        <li><strong>Entrega:</strong> 24/72h (según disponibilidad)</li>
+      </ul>
+    </div>
+
+    <div class="modal__actions">
+      <a class="btn btn--wa btn--wide" target="_blank" id="modalWa"
+         href="https://wa.me/34633897821?text=Hola,%20quiero%20informaci%C3%B3n">
+        🟢 Pedir por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__text">© 2026 PACMAQ · Maquinaria profesional</div>
+
+    <a class="btn btn--wa" target="_blank"
+       href="https://wa.me/34633897821?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20una%20desbrozadora%20autom%C3%A1tica">
+      🟢 Hacer pedido
+    </a>
+  </div>
 </footer>
 
 <script src="script.js"></script>
