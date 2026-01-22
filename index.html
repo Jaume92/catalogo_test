@@ -1,113 +1,353 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>GRAPPA | Desbrozadoras Automáticas</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Desbrozadoras Automáticas Profesionales | Grappa</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<header class="site-header">
-  <div class="container nav-wrap">
+<!-- ================= NAV ================= -->
 
-    <div class="brand">GRAPPA</div>
+<header>
+<nav class="navbar">
 
-    <button class="nav-toggle">
-      <span></span><span></span><span></span>
-    </button>
+  <div class="logo">GRAPPA</div>
 
-    <nav class="nav">
-      <a href="#">Inicio</a>
-      <a href="#productos">Productos</a>
-      <a href="#contacto">Contacto</a>
-      <a href="#contacto" class="nav-cta">Presupuesto</a>
-    </nav>
-
+  <div class="nav-center">
+    <a href="#hero">Inicio</a>
+    <a href="#productos">Modelos</a>
+    <a href="#contacto">Contacto</a>
   </div>
+
+  <div class="nav-right">
+    <button class="btn-nav-primary">Solicitar Presupuesto</button>
+  </div>
+
+</nav>
 </header>
 
-<!-- HERO -->
-<section class="hero">
 
-  <div class="hero-bg"></div>
+<!-- ================= HERO ================= -->
 
-  <div class="hero-content">
-    <h1>Potencia automática para el desbroce profesional</h1>
-    <p>Maquinaria robusta diseñada para trabajos extremos en campo y zonas rurales.</p>
+<section class="hero" id="hero">
 
-    <div class="hero-actions">
-      <a href="#contacto" class="btn primary">Solicitar presupuesto</a>
-      <button id="whatsappBtn" class="btn secondary">WhatsApp directo</button>
-    </div>
+<div class="hero-content">
+
+<div class="hero-left">
+
+<span class="badge">EQUIPAMIENTO PROFESIONAL</span>
+
+<h1>
+Desbrozadoras automáticas <br>
+para trabajos <span>extremos</span>
+</h1>
+
+<p>
+Maquinaria agrícola e industrial diseñada para alto rendimiento,
+uso continuo y máxima potencia.
+</p>
+
+<div class="hero-actions">
+<button class="btn-hero-main">Solicitar Presupuesto</button>
+<button class="btn-hero-secondary">Ver modelos</button>
+</div>
+
+</div>
+
+<div class="hero-right">
+
+<div class="hero-card">
+<span class="badge-circle">NUEVO<br>2025</span>
+<img src="assets/images/roja1.jpeg">
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= FEATURES STRIP ================= -->
+
+<section class="features-strip">
+
+<div class="features-grid">
+
+  <div class="feature-card">
+    <span>⚙️</span>
+    <p>Potencia Motor</p>
+    <h3>15–20 HP</h3>
   </div>
+
+  <div class="feature-card">
+    <span>📏</span>
+    <p>Ancho Corte</p>
+    <h3>80–120 cm</h3>
+  </div>
+
+  <div class="feature-card">
+    <span>⏩</span>
+    <p>Velocidad</p>
+    <h3>0–6 km/h</h3>
+  </div>
+
+  <div class="feature-card">
+    <span>⛽</span>
+    <p>Combustible</p>
+    <h3>12–18 L</h3>
+  </div>
+
+  <div class="feature-card">
+    <span>📐</span>
+    <p>Altura Corte</p>
+    <h3>3–12 cm</h3>
+  </div>
+
+  <div class="feature-card">
+    <span>🚜</span>
+    <p>Tracción</p>
+    <h3>4x4 Integral</h3>
+  </div>
+
+</div>
 
 </section>
 
-<!-- PRODUCTOS -->
-<section id="productos" class="section">
 
-  <div class="container">
+<!-- ================= PRODUCTOS ================= -->
 
-    <h2 class="center">Nuestros modelos</h2>
+<section class="products" id="productos">
 
-    <div class="products">
 
-      <div class="product">
-        <div class="product-img azul1"></div>
-        <h3>Modelo 80cm</h3>
-        <p>Compacta y eficiente para mantenimiento agrícola.</p>
-        <a href="#contacto" class="btn primary small">Pedir precio</a>
-      </div>
 
-      <div class="product">
-        <div class="product-img azul2"></div>
-        <h3>Modelo 100cm</h3>
-        <p>Equilibrio perfecto entre potencia y maniobrabilidad.</p>
-        <a href="#contacto" class="btn primary small">Pedir precio</a>
-      </div>
+<div class="products-grid">
 
-      <div class="product">
-        <div class="product-img azul3"></div>
-        <h3>Modelo 120cm</h3>
-        <p>Uso industrial para terrenos extremos.</p>
-        <a href="#contacto" class="btn primary small">Pedir precio</a>
-      </div>
+<!-- ===== MODELO ROJO ===== -->
 
-    </div>
+<article class="product-module">
 
-  </div>
+<h3>Modelo Profesional ROJO</h3>
+
+<div class="product-gallery">
+
+<button class="arrow left" onclick="changeSlide(0,-1)">❮</button>
+
+<img class="product-slide slide-0 active" src="assets/images/roja1.jpeg">
+<img class="product-slide slide-0" src="assets/images/roja2.jpeg">
+<img class="product-slide slide-0" src="assets/images/roja3.jpeg">
+
+<button class="arrow right" onclick="changeSlide(0,1)">❯</button>
+
+</div>
+
+<div class="product-content">
+
+<p>Modelo diésel industrial para trabajos extremos.</p>
+
+<div class="option-group">
+<span>Tamaño:</span>
+<button onclick="setModel(0,80,this)">80cm</button>
+<button onclick="setModel(0,100,this)" class="active">100cm</button>
+<button onclick="setModel(0,120,this)">120cm</button>
+</div>
+
+<p class="price" id="price-0">Desde 4.300€</p>
+
+<button class="btn-module" onclick="openModal('red')">Ficha técnica</button>
+
+</div>
+
+</article>
+
+
+<!-- ===== MODELO AZUL ===== -->
+
+<article class="product-module">
+
+<h3>Modelo Profesional AZUL</h3>
+
+<div class="product-gallery">
+
+<button class="arrow left" onclick="changeSlide(1,-1)">❮</button>
+
+<img class="product-slide slide-1 active" src="assets/images/azul1.jpeg">
+<img class="product-slide slide-1" src="assets/images/azul2.jpeg">
+<img class="product-slide slide-1" src="assets/images/azul3.jpeg">
+
+<button class="arrow right" onclick="changeSlide(1,1)">❯</button>
+
+</div>
+
+<div class="product-content">
+
+<p>Modelo compacto gasolina con generador integrado.</p>
+
+<div class="option-group">
+<span>Versión:</span>
+<p style="font-weight:700;">Modelo único compacto</p>
+</div>
+
+<p class="price">2.600€ + IVA</p>
+
+
+<button class="btn-module" onclick="openModal('blue')">Ficha técnica</button>
+
+</div>
+
+</article>
+
+</div>
 
 </section>
 
-<!-- CONTACTO -->
-<section id="contacto" class="section dark">
 
-  <div class="container contact">
+<!-- ================= MODAL ================= -->
 
-    <div>
-      <h2>Solicita presupuesto</h2>
-      <p>Contacta rápido por WhatsApp o deja tus datos.</p>
-      <button id="whatsappBtn2" class="btn primary">WhatsApp directo</button>
-    </div>
+<div id="modal-bg" class="modal-bg" onclick="closeModal()"></div>
 
-    <form>
-      <input type="text" placeholder="Nombre">
-      <input type="tel" placeholder="Teléfono">
-      <textarea placeholder="Mensaje"></textarea>
-      <button class="btn primary full">Enviar</button>
-    </form>
+<div id="modal-red" class="modal">
 
-  </div>
+<h2>Ficha Técnica · Modelo ROJO</h2>
 
-</section>
+<ul>
+<li><b>Motor:</b> Koop 195 Diésel · 15 CV</li>
+<li><b>Arranque:</b> Eléctrico remoto</li>
+<li><b>Control remoto:</b> Industrial · 400 m</li>
+<li><b>Ancho corte:</b> 800 / 1000 / 1200 mm</li>
+<li><b>Altura corte:</b> 20 – 200 mm</li>
+<li><b>Peso:</b> 338 – 356 kg</li>
+</ul>
 
-<footer class="footer">
-  © 2026 GRAPPA — Maquinaria profesional
+<button class="close-btn" onclick="closeModal()">Cerrar</button>
+
+</div>
+
+
+<div id="modal-blue" class="modal">
+
+<h2>Ficha Técnica · Modelo AZUL</h2>
+
+<ul>
+<li><b>Motor:</b> Loncin · 224cc gasolina</li>
+<li><b>Potencia:</b> 4.5 kW</li>
+<li><b>Control remoto:</b> 200 m</li>
+<li><b>Ancho corte:</b> 550 mm</li>
+<li><b>Altura corte:</b> 20 – 80 mm</li>
+<li><b>Pendiente:</b> 40°</li>
+</ul>
+
+<button class="close-btn" onclick="closeModal()">Cerrar</button>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer id="contacto">
+<p>© 2026 Grappa Maquinaria · Equipamiento Profesional</p>
 </footer>
 
+
+<!-- ================= JS ================= -->
+
 <script src="script.js"></script>
+
+
+<footer class="footer-pro">
+
+<div class="footer-container">
+
+  <!-- BRAND -->
+
+  <div class="footer-col brand">
+
+    <div class="footer-logo">GRAPPA</div>
+
+    <p>
+      Especialistas en maquinaria agrícola y forestal profesional.
+      Soluciones de alto rendimiento para mantenimiento de terrenos.
+    </p>
+
+    <div class="social-icons">
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="Instagram">ig</a>
+      <a href="#" aria-label="YouTube">yt</a>
+      <a href="#" aria-label="Facebook">fb</a>
+    </div>
+
+  </div>
+
+
+  <!-- PRODUCTOS -->
+
+  <div class="footer-col">
+
+    <h4>Productos</h4>
+
+    <ul>
+      <li>Desbrozadoras 80cm</li>
+      <li>Desbrozadoras 100cm</li>
+      <li>Desbrozadoras 120cm</li>
+      <li>Accesorios</li>
+      <li>Repuestos</li>
+    </ul>
+
+  </div>
+
+
+  <!-- INFORMACION -->
+
+  <div class="footer-col">
+
+    <h4>Información</h4>
+
+    <ul>
+      <li>📍 España</li>
+      <li>📞 +34 600 000 000</li>
+      <li>✉ info@desbrozadoras.com</li>
+      <li>🕒 Lun - Vie: 9:00 - 18:00</li>
+      <li>🕒 Sáb: 9:00 - 14:00</li>
+    </ul>
+
+  </div>
+
+
+  <!-- SOPORTE -->
+
+  <div class="footer-col">
+
+    <h4>Soporte</h4>
+
+    <ul>
+      <li>Garantía</li>
+      <li>Mantenimiento</li>
+      <li>Descargas</li>
+      <li>Contacto</li>
+    </ul>
+
+  </div>
+
+</div>
+
+
+<div class="footer-bottom">
+© 2026 Grappa Maquinaria · Todos los derechos reservados
+</div>
+
+</footer>
+
+
+
+
+
+
+
 
 </body>
 </html>
