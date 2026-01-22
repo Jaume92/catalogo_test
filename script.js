@@ -1,6 +1,7 @@
 // ================= SLIDERS =================
 
 let sliders = [0, 0];
+let autoplayPaused = false;
 
 function changeSlide(product, direction) {
 
@@ -16,8 +17,10 @@ function changeSlide(product, direction) {
   slides[sliders[product]].classList.add("active");
 }
 
-// Autoplay seguro
+// Autoplay seguro (pausable)
 setInterval(() => {
+
+  if (autoplayPaused) return;
 
   if (document.querySelector(".slide-0")) {
     changeSlide(0, 1);
@@ -99,12 +102,6 @@ function scrollToModels() {
   });
 }
 
-function scrollToContact() {
-  document.getElementById("contacto").scrollIntoView({
-    behavior: "smooth"
-  });
-}
-
 
 // ================= WHATSAPP =================
 
@@ -135,9 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---------- BOTÓN WHATSAPP FLOTANTE ----------
 
+  const waMsg = encodeURIComponent(
+    "Hola, estoy interesado en una desbrozadora automática GRAPPA. Quiero solicitar presupuesto."
+  );
+
   const waBtn = document.createElement("a");
 
-  waBtn.href = "https://wa.me/34640837217";
+  waBtn.href = `https://wa.me/34640837217?text=${waMsg}`;
   waBtn.target = "_blank";
 
   waBtn.style.position = "fixed";
@@ -169,10 +170,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let endX = 0;
 
     gallery.addEventListener("touchstart", e => {
+      autoplayPaused = true;
       startX = e.touches[0].clientX;
     });
 
     gallery.addEventListener("touchend", e => {
+
       endX = e.changedTouches[0].clientX;
 
       const diff = startX - endX;
@@ -185,8 +188,26 @@ document.addEventListener("DOMContentLoaded", () => {
         changeSlide(index, -1);
       }
 
+      // reactivar autoplay después de interacción
+      setTimeout(() => {
+        autoplayPaused = false;
+      }, 3000);
+
     });
 
   });
 
 });
+
+
+// ================= MOBILE MENU =================
+
+function toggleMenu(){
+
+  const menu = document.getElementById("mobile-menu");
+  const bg = document.getElementById("mobile-menu-bg");
+
+  menu.classList.toggle("active");
+  bg.classList.toggle("active");
+
+}

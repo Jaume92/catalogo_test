@@ -425,6 +425,9 @@ html,body{
   font-size: 28px;
   color: white;
   cursor: pointer;
+
+  position: relative;   /* FIX */
+  z-index: 10001;       /* FIX */
 }
 
 /* Fondo oscuro */
