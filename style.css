@@ -341,3 +341,63 @@ html,body{
   }
 
 }
+/* ================= FIX MOBILE PRODUCT CARD ================= */
+
+@media (max-width: 768px){
+
+  .product-module{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 420px;   /* sensación de card centrada */
+  }
+
+  .product-gallery{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .product-slide{
+    margin: 0 auto;
+  }
+
+  .product-content{
+    text-align: center;
+  }
+
+  .option-group{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .price{
+    text-align: center;
+  }
+
+  .btn-module{
+    width: 100%;
+    margin-top: 100px;
+  }
+
+}
+
+
+
+/* Swipe smooth feeling */
+
+.product-gallery{
+  touch-action: pan-y;
+}
+
+.product-slide{
+  transition: opacity .25s ease;
+}
+/* ================= HIDE ARROWS ON MOBILE ================= */
+
+@media (max-width: 768px){
+
+  .arrow{
+    display: none !important;
+  }
+
+}

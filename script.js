@@ -129,3 +129,38 @@ function scrollToContact() {
     behavior: "smooth"
   });
 }
+// ================= MOBILE SWIPE SLIDER =================
+
+let startX = 0;
+let endX = 0;
+
+document.querySelectorAll(".product-gallery").forEach((gallery, index) => {
+
+  gallery.addEventListener("touchstart", e => {
+    startX = e.touches[0].clientX;
+  });
+
+  gallery.addEventListener("touchend", e => {
+    endX = e.changedTouches[0].clientX;
+
+    handleSwipe(index);
+  });
+
+});
+
+function handleSwipe(productIndex){
+
+  const diff = startX - endX;
+
+  // sensibilidad swipe
+  if(Math.abs(diff) < 40) return;
+
+  if(diff > 0){
+    // swipe izquierda → siguiente
+    changeSlide(productIndex, 1);
+  } else {
+    // swipe derecha → anterior
+    changeSlide(productIndex, -1);
+  }
+
+}
