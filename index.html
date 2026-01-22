@@ -18,6 +18,8 @@
 <header>
 <nav class="navbar">
 
+  <div class="burger" onclick="toggleMenu()">☰</div>
+
   <div class="logo">
     <img src="assets/images/logo1.jpeg" alt="Grappa Maquinaria Logo">
   </div>
@@ -31,6 +33,15 @@
 </nav>
 </header>
 
+<!-- ===== MOBILE MENU (MOVIDO FUERA DEL NAV - FIX) ===== -->
+
+<div id="mobile-menu-bg" onclick="toggleMenu()"></div>
+
+<div id="mobile-menu">
+  <a href="#hero" onclick="toggleMenu()">Inicio</a>
+  <a href="#productos" onclick="toggleMenu()">Modelos</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+</div>
 
 <!-- ================= HERO ================= -->
 
@@ -54,7 +65,8 @@ uso continuo y máxima potencia.
 
 <div class="hero-actions">
 
-<button class="btn-hero-main" onclick="openWhatsapp()">
+<!-- FIX: función correcta -->
+<button class="btn-hero-main" onclick="solicitarPresupuesto()">
 Solicitar Presupuesto
 </button>
 
@@ -79,7 +91,7 @@ Ver modelos
 
 </section>
 
-<!-- ================= FEATURES STRIP ================= -->
+<!-- ================= FEATURES ================= -->
 
 <section class="features-strip">
 
@@ -125,14 +137,13 @@ Ver modelos
 
 </section>
 
-
 <!-- ================= PRODUCTOS ================= -->
 
 <section class="products" id="productos">
 
 <div class="products-grid">
 
-<!-- ===== MODELO ROJO ===== -->
+<!-- ROJO -->
 
 <article class="product-module">
 
@@ -142,8 +153,8 @@ Ver modelos
 
 <button class="arrow left" onclick="changeSlide(0,-1)">❮</button>
 
-<img class="product-slide slide-0 active" src="assets/images/roja1.jpeg" alt="Desbrozadora roja frontal">
-<img class="product-slide slide-0" src="assets/images/roja2.jpeg" alt="Desbrozadora roja lateral">
+<img class="product-slide slide-0 active" src="assets/images/roja1.jpeg">
+<img class="product-slide slide-0" src="assets/images/roja2.jpeg">
 
 <button class="arrow right" onclick="changeSlide(0,1)">❯</button>
 
@@ -162,7 +173,7 @@ Ver modelos
 
 <p class="price" id="price-0">Desde 4.300€</p>
 
-<button type="button" class="btn-module" onclick="openModal('red')">
+<button class="btn-module" onclick="openModal('red')">
 Ficha técnica
 </button>
 
@@ -170,8 +181,7 @@ Ficha técnica
 
 </article>
 
-
-<!-- ===== MODELO AZUL ===== -->
+<!-- AZUL -->
 
 <article class="product-module">
 
@@ -181,9 +191,9 @@ Ficha técnica
 
 <button class="arrow left" onclick="changeSlide(1,-1)">❮</button>
 
-<img class="product-slide slide-1 active" src="assets/images/azul1.jpeg" alt="Desbrozadora azul frontal">
-<img class="product-slide slide-1" src="assets/images/azul2.jpeg" alt="Desbrozadora azul lateral">
-<img class="product-slide slide-1" src="assets/images/azul3.jpeg" alt="Desbrozadora azul trasera">
+<img class="product-slide slide-1 active" src="assets/images/azul1.jpeg">
+<img class="product-slide slide-1" src="assets/images/azul2.jpeg">
+<img class="product-slide slide-1" src="assets/images/azul3.jpeg">
 
 <button class="arrow right" onclick="changeSlide(1,1)">❯</button>
 
@@ -200,7 +210,7 @@ Ficha técnica
 
 <p class="price">2.600€ + IVA</p>
 
-<button type="button" class="btn-module" onclick="openModal('blue')">
+<button class="btn-module" onclick="openModal('blue')">
 Ficha técnica
 </button>
 
@@ -212,90 +222,86 @@ Ficha técnica
 
 </section>
 
-
-<!-- ================= MODALES PRODUCTO ================= -->
+<!-- ================= MODALES ================= -->
 
 <div id="modal-bg"></div>
 
 <div id="modal-red" class="modal">
-  <h3>Ficha técnica - Modelo Rojo</h3>
-  <ul>
-    <li>Ancho de corte: 100cm</li>
-    <li>Motor diésel industrial</li>
-    <li>Uso intensivo</li>
-    <li>Garantía 12 meses</li>
-  </ul>
-  <button class="btn-module" onclick="closeModal()">Cerrar</button>
+<h3>Ficha técnica - Modelo Rojo</h3>
+<ul>
+<li>Ancho de corte: 100cm</li>
+<li>Motor diésel industrial</li>
+<li>Uso intensivo</li>
+<li>Garantía 12 meses</li>
+</ul>
+<button class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
 
 <div id="modal-blue" class="modal">
-  <h3>Ficha técnica - Modelo Azul</h3>
-  <ul>
-    <li>Ancho de corte: 100cm</li>
-    <li>Motor profesional</li>
-    <li>Uso agrícola / industrial</li>
-    <li>Garantía 12 meses</li>
-  </ul>
-  <button class="btn-module" onclick="closeModal()">Cerrar</button>
+<h3>Ficha técnica - Modelo Azul</h3>
+<ul>
+<li>Ancho de corte: 100cm</li>
+<li>Motor profesional</li>
+<li>Uso agrícola / industrial</li>
+<li>Garantía 12 meses</li>
+</ul>
+<button class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
 
-
-<!-- ================= FOOTER PRO ================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer class="footer-pro" id="contacto">
 
 <div class="footer-container">
 
-  <div class="footer-col brand">
+<div class="footer-col brand">
 
-    <div class="logo">
-      <img src="assets/images/logo1.jpeg" alt="Grappa Logo">
-    </div>
+<div class="logo">
+<img src="assets/images/logo1.jpeg" alt="Grappa Logo">
+</div>
 
-    <p>
-      Especialistas en maquinaria agrícola y forestal profesional.
-      Soluciones de alto rendimiento para mantenimiento de terrenos.
-    </p>
+<p>
+Especialistas en maquinaria agrícola y forestal profesional.
+Soluciones de alto rendimiento para mantenimiento de terrenos.
+</p>
 
-    <div class="social-icons">
-      <a href="#">in</a>
-      <a href="#">ig</a>
-      <a href="#">yt</a>
-      <a href="#">fb</a>
-    </div>
+<div class="social-icons">
+<a href="#">in</a>
+<a href="#">ig</a>
+<a href="#">yt</a>
+<a href="#">fb</a>
+</div>
 
-  </div>
+</div>
 
-  <div class="footer-col">
-    <h4>Productos</h4>
-    <ul>
-      <li>Desbrozadoras 80cm</li>
-      <li>Desbrozadoras 100cm</li>
-      <li>Desbrozadoras 120cm</li>
-      <li>Accesorios</li>
-      <li>Repuestos</li>
-    </ul>
-  </div>
+<div class="footer-col">
+<h4>Productos</h4>
+<ul>
+<li>Desbrozadoras 80cm</li>
+<li>Desbrozadoras 100cm</li>
+<li>Desbrozadoras 120cm</li>
+<li>Accesorios</li>
+<li>Repuestos</li>
+</ul>
+</div>
 
-  <div class="footer-col">
-    <h4>Información</h4>
-    <ul>
-      <li>📍 España</li>
-      <li>📞 +34 640837217</li>
-      <li>✉ info@grappamaquinaria.com</li>
-    </ul>
-  </div>
+<div class="footer-col">
+<h4>Información</h4>
+<ul>
+<li>📍 España</li>
+<li>📞 +34 640837217</li>
+<li>✉ info@grappamaquinaria.com</li>
+</ul>
+</div>
 
-  <!-- LEGAL -->
-
-  <div class="footer-col">
-    <h4>Legal</h4>
-    <ul>
-      <li><a href="#" onclick="openLegal('aviso')">Aviso legal</a></li>
-      <li><a href="#" onclick="openLegal('privacidad')">Privacidad</a></li>
-      <li><a href="#" onclick="openLegal('cookies')">Cookies</a></li>
-    </ul>
-  </div>
+<div class="footer-col">
+<h4>Legal</h4>
+<ul>
+<li><a href="#" onclick="openLegal('aviso')">Aviso legal</a></li>
+<li><a href="#" onclick="openLegal('privacidad')">Privacidad</a></li>
+<li><a href="#" onclick="openLegal('cookies')">Cookies</a></li>
+</ul>
+</div>
 
 </div>
 
@@ -305,17 +311,13 @@ Ficha técnica
 
 </footer>
 
-
-<!-- ================= MODAL LEGAL ================= -->
+<!-- MODAL LEGAL -->
 
 <div id="legal-modal" class="modal">
-  <h3 id="legal-title"></h3>
-  <p id="legal-content"></p>
-  <button class="btn-module" onclick="closeLegal()">Cerrar</button>
+<h3 id="legal-title"></h3>
+<p id="legal-content"></p>
+<button class="btn-module" onclick="closeLegal()">Cerrar</button>
 </div>
-
-
-<!-- ================= JS ================= -->
 
 <script src="script.js"></script>
 

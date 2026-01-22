@@ -415,3 +415,73 @@ html,body{
     display:none !important;
   }
 }
+
+
+
+/* ===== MOBILE MENU ===== */
+
+.burger{
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Fondo oscuro */
+
+#mobile-menu-bg{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  display: none;
+  z-index: 9997;
+}
+
+/* Panel lateral */
+
+#mobile-menu{
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: white;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: .3s ease;
+  z-index: 9998;
+  box-shadow: -10px 0 30px rgba(0,0,0,.2);
+}
+
+#mobile-menu a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ACTIVO */
+
+#mobile-menu.active{
+  right: 0;
+}
+
+#mobile-menu-bg.active{
+  display: block;
+}
+
+/* SOLO EN MOVIL */
+
+@media(max-width:900px){
+
+  .nav-center{
+    display: none;
+  }
+
+  .burger{
+    display: block;
+  }
+
+}
