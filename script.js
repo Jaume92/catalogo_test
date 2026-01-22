@@ -1,6 +1,6 @@
 // ================= SLIDERS =================
 
-let sliders = [0, 0]; // índice por producto
+let sliders = [0, 0];
 
 function changeSlide(product, direction) {
 
@@ -16,7 +16,7 @@ function changeSlide(product, direction) {
   slides[sliders[product]].classList.add("active");
 }
 
-// Autoplay seguro SOLO si existen sliders
+// Autoplay seguro
 setInterval(() => {
 
   if (document.querySelector(".slide-0")) {
@@ -36,7 +36,7 @@ function setModel(product, size, btn) {
 
   let price = "";
 
-  if (size === 80) price = "Desde 4200€";
+  if (size === 80) price = "Desde 4.200€";
   if (size === 100) price = "Desde 4.300€";
   if (size === 120) price = "Desde 4.700€";
 
@@ -64,7 +64,6 @@ function openModal(type) {
   const red = document.getElementById("modal-red");
   const blue = document.getElementById("modal-blue");
 
-  // limpiar estado anterior
   if (red) red.style.display = "none";
   if (blue) blue.style.display = "none";
 
@@ -73,7 +72,6 @@ function openModal(type) {
   if (type === "red" && red) red.style.display = "block";
   if (type === "blue" && blue) blue.style.display = "block";
 
-  // guardar scroll original
   scrollBackup = document.body.style.overflow;
   document.body.style.overflow = "hidden";
 }
@@ -89,33 +87,11 @@ function closeModal() {
   if (red) red.style.display = "none";
   if (blue) blue.style.display = "none";
 
-  // restaurar scroll correctamente
   document.body.style.overflow = scrollBackup || "auto";
 }
 
 
-// Cerrar tocando fondo oscuro
-document.addEventListener("DOMContentLoaded", () => {
-
-  const bg = document.getElementById("modal-bg");
-
-  if (bg) {
-    bg.addEventListener("click", closeModal);
-  }
-
-});
-
-
-function solicitarPresupuesto() {
-
-  const mensaje = encodeURIComponent(
-    "Hola, estoy interesado en una desbrozadora automática GRAPPA. Quiero solicitar presupuesto."
-  );
-
-  const url = `https://wa.me/${34640837217}?text=${mensaje}`;
-
-  window.open(url, "_blank");
-}
+// ================= NAV ACTIONS =================
 
 function scrollToModels() {
   document.getElementById("productos").scrollIntoView({
@@ -123,44 +99,94 @@ function scrollToModels() {
   });
 }
 
-
 function scrollToContact() {
   document.getElementById("contacto").scrollIntoView({
     behavior: "smooth"
   });
 }
-// ================= MOBILE SWIPE SLIDER =================
 
-let startX = 0;
-let endX = 0;
 
-document.querySelectorAll(".product-gallery").forEach((gallery, index) => {
+// ================= WHATSAPP =================
 
-  gallery.addEventListener("touchstart", e => {
-    startX = e.touches[0].clientX;
-  });
+function solicitarPresupuesto() {
 
-  gallery.addEventListener("touchend", e => {
-    endX = e.changedTouches[0].clientX;
+  const phone = "34640837217";
 
-    handleSwipe(index);
+  const mensaje = encodeURIComponent(
+    "Hola, estoy interesado en una desbrozadora automática GRAPPA. Quiero solicitar presupuesto."
+  );
+
+  const url = `https://wa.me/${phone}?text=${mensaje}`;
+
+  window.open(url, "_blank");
+}
+
+
+// ================= DOM READY =================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // cerrar modal tocando fondo
+  const bg = document.getElementById("modal-bg");
+
+  if (bg) {
+    bg.addEventListener("click", closeModal);
+  }
+
+  // ---------- BOTÓN WHATSAPP FLOTANTE ----------
+
+  const waBtn = document.createElement("a");
+
+  waBtn.href = "https://wa.me/34640837217";
+  waBtn.target = "_blank";
+
+  waBtn.style.position = "fixed";
+  waBtn.style.bottom = "20px";
+  waBtn.style.right = "20px";
+  waBtn.style.width = "62px";
+  waBtn.style.height = "62px";
+  waBtn.style.background = "#25D366";
+  waBtn.style.borderRadius = "50%";
+  waBtn.style.display = "flex";
+  waBtn.style.alignItems = "center";
+  waBtn.style.justifyContent = "center";
+  waBtn.style.fontSize = "28px";
+  waBtn.style.color = "#fff";
+  waBtn.style.textDecoration = "none";
+  waBtn.style.boxShadow = "0 8px 20px rgba(0,0,0,.3)";
+  waBtn.style.zIndex = "9999";
+
+  waBtn.innerHTML = "💬";
+
+  document.body.appendChild(waBtn);
+
+
+  // ---------- MOBILE SWIPE ----------
+
+  document.querySelectorAll(".product-gallery").forEach((gallery, index) => {
+
+    let startX = 0;
+    let endX = 0;
+
+    gallery.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    });
+
+    gallery.addEventListener("touchend", e => {
+      endX = e.changedTouches[0].clientX;
+
+      const diff = startX - endX;
+
+      if (Math.abs(diff) < 40) return;
+
+      if (diff > 0) {
+        changeSlide(index, 1);
+      } else {
+        changeSlide(index, -1);
+      }
+
+    });
+
   });
 
 });
-
-function handleSwipe(productIndex){
-
-  const diff = startX - endX;
-
-  // sensibilidad swipe
-  if(Math.abs(diff) < 40) return;
-
-  if(diff > 0){
-    // swipe izquierda → siguiente
-    changeSlide(productIndex, 1);
-  } else {
-    // swipe derecha → anterior
-    changeSlide(productIndex, -1);
-  }
-
-}

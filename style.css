@@ -226,6 +226,7 @@ html,body{
 .product-slide{
   display:none;
   max-height:240px;
+  object-fit:contain; /* FIX imagen deformada */
 }
 
 .product-slide.active{
@@ -322,6 +323,7 @@ html,body{
   .hero-content{
     flex-direction:column;
     text-align:center;
+    align-items:center; /* FIX centrado real */
   }
 
   .products-grid{
@@ -330,6 +332,13 @@ html,body{
 
   .features-grid{
     grid-template-columns:repeat(2,1fr);
+  }
+
+  /* FIX footer responsive */
+  .footer-container{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
   }
 
 }
@@ -341,49 +350,55 @@ html,body{
   }
 
 }
-/* ================= FIX MOBILE PRODUCT CARD ================= */
+
+/* ================= MOBILE WALLAPOP FIX ================= */
 
 @media (max-width: 768px){
 
+  .products{
+    padding:24px 12px;
+  }
+
+  .products-grid{
+    gap:16px;
+  }
+
   .product-module{
-    margin: 0 auto;
-    width: 100%;
-    max-width: 420px;   /* sensación de card centrada */
+    padding:16px;
+    border-radius:18px;
   }
 
   .product-gallery{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding:12px;
+    border-radius:16px;
+    max-width:360px; /* FIX centrado marketplace */
+    margin:0 auto;
   }
 
   .product-slide{
-    margin: 0 auto;
+    max-height:220px;
+    margin:0 auto;
   }
 
   .product-content{
-    text-align: center;
-  }
-
-  .option-group{
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align:left;
   }
 
   .price{
-    text-align: center;
+    text-align:left;
+    font-size:22px;
   }
 
   .btn-module{
-    width: 100%;
-    margin-top: 100px;
+    width:100%;
+    margin-top:12px;
+    padding:14px;
+    border-radius:12px;
   }
 
 }
 
-
-
-/* Swipe smooth feeling */
+/* Swipe smooth */
 
 .product-gallery{
   touch-action: pan-y;
@@ -392,12 +407,11 @@ html,body{
 .product-slide{
   transition: opacity .25s ease;
 }
-/* ================= HIDE ARROWS ON MOBILE ================= */
+
+/* Ocultar flechas en móvil */
 
 @media (max-width: 768px){
-
   .arrow{
-    display: none !important;
+    display:none !important;
   }
-
 }

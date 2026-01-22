@@ -19,13 +19,13 @@
 <nav class="navbar">
 
   <div class="logo">
-    <img src="assets/images/logo1.jpeg" alt="Grappa Logo">
+    <img src="assets/images/logo1.jpeg" alt="Grappa Maquinaria Logo">
   </div>
 
   <div class="nav-center">
     <a href="#hero">Inicio</a>
     <a href="#productos">Modelos</a>
-    <a href="javascript:void(0)" onclick="scrollToContact()">Contacto</a>
+    <a href="#contacto">Contacto</a>
   </div>
 
 </nav>
@@ -54,7 +54,7 @@ uso continuo y máxima potencia.
 
 <div class="hero-actions">
 
-<button class="btn-hero-main" onclick="solicitarPresupuesto()">
+<button class="btn-hero-main" onclick="openWhatsapp()">
 Solicitar Presupuesto
 </button>
 
@@ -70,7 +70,7 @@ Ver modelos
 
 <div class="hero-card">
 <span class="badge-circle">NUEVO<br>2025</span>
-<img src="assets/images/roja1.jpeg">
+<img src="assets/images/roja1.jpeg" alt="Desbrozadora automática profesional Grappa">
 </div>
 
 </div>
@@ -142,8 +142,8 @@ Ver modelos
 
 <button class="arrow left" onclick="changeSlide(0,-1)">❮</button>
 
-<img class="product-slide slide-0 active" src="assets/images/roja1.jpeg">
-<img class="product-slide slide-0" src="assets/images/roja2.jpeg">
+<img class="product-slide slide-0 active" src="assets/images/roja1.jpeg" alt="Desbrozadora roja frontal">
+<img class="product-slide slide-0" src="assets/images/roja2.jpeg" alt="Desbrozadora roja lateral">
 
 <button class="arrow right" onclick="changeSlide(0,1)">❯</button>
 
@@ -181,9 +181,9 @@ Ficha técnica
 
 <button class="arrow left" onclick="changeSlide(1,-1)">❮</button>
 
-<img class="product-slide slide-1 active" src="assets/images/azul1.jpeg">
-<img class="product-slide slide-1" src="assets/images/azul2.jpeg">
-<img class="product-slide slide-1" src="assets/images/azul3.jpeg">
+<img class="product-slide slide-1 active" src="assets/images/azul1.jpeg" alt="Desbrozadora azul frontal">
+<img class="product-slide slide-1" src="assets/images/azul2.jpeg" alt="Desbrozadora azul lateral">
+<img class="product-slide slide-1" src="assets/images/azul3.jpeg" alt="Desbrozadora azul trasera">
 
 <button class="arrow right" onclick="changeSlide(1,1)">❯</button>
 
@@ -213,11 +213,11 @@ Ficha técnica
 </section>
 
 
-<!-- ================= MODAL SYSTEM ================= -->
+<!-- ================= MODALES PRODUCTO ================= -->
 
 <div id="modal-bg"></div>
 
-<div id="modal-red" class="modal" style="display:none;">
+<div id="modal-red" class="modal">
   <h3>Ficha técnica - Modelo Rojo</h3>
   <ul>
     <li>Ancho de corte: 100cm</li>
@@ -225,10 +225,10 @@ Ficha técnica
     <li>Uso intensivo</li>
     <li>Garantía 12 meses</li>
   </ul>
-  <button type="button" class="btn-module" onclick="closeModal()">Cerrar</button>
+  <button class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
 
-<div id="modal-blue" class="modal" style="display:none;">
+<div id="modal-blue" class="modal">
   <h3>Ficha técnica - Modelo Azul</h3>
   <ul>
     <li>Ancho de corte: 100cm</li>
@@ -286,12 +286,14 @@ Ficha técnica
     </ul>
   </div>
 
+  <!-- LEGAL -->
+
   <div class="footer-col">
-    <h4>Soporte</h4>
+    <h4>Legal</h4>
     <ul>
-      <li>Garantía</li>
-      <li>Mantenimiento</li>
-      <li>Contacto</li>
+      <li><a href="#" onclick="openLegal('aviso')">Aviso legal</a></li>
+      <li><a href="#" onclick="openLegal('privacidad')">Privacidad</a></li>
+      <li><a href="#" onclick="openLegal('cookies')">Cookies</a></li>
     </ul>
   </div>
 
@@ -304,10 +306,18 @@ Ficha técnica
 </footer>
 
 
+<!-- ================= MODAL LEGAL ================= -->
+
+<div id="legal-modal" class="modal">
+  <h3 id="legal-title"></h3>
+  <p id="legal-content"></p>
+  <button class="btn-module" onclick="closeLegal()">Cerrar</button>
+</div>
+
+
 <!-- ================= JS ================= -->
 
 <script src="script.js"></script>
 
 </body>
 </html>
-
