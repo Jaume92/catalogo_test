@@ -9,58 +9,44 @@
 
 <body>
 
-<!-- NAV -->
-<header class="site-header" id="top">
+<header class="site-header">
   <div class="container nav-wrap">
 
-    <a class="brand" href="#">
-      <span class="brand__name">GRAPPA</span>
-    </a>
+    <div class="brand">GRAPPA</div>
 
-    <button class="nav-toggle" aria-label="Abrir menú">
+    <button class="nav-toggle">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="nav" id="navMenu">
-      <a class="nav__link is-active" href="#">INICIO</a>
-      <a class="nav__link" href="#empresa">EMPRESA</a>
-      <a class="nav__link" href="#productos">PRODUCTOS</a>
-      <a class="nav__link" href="#contacto">CONTACTO</a>
-      <a class="nav__cta" href="#contacto">PRESUPUESTO</a>
+    <nav class="nav">
+      <a href="#">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto" class="nav-cta">Presupuesto</a>
     </nav>
 
   </div>
 </header>
 
-<main>
-
 <!-- HERO -->
 <section class="hero">
 
-  <!-- Fondo imagen -->
-  <div class="hero__bg"></div>
+  <div class="hero-bg"></div>
 
-  <!-- Panel lateral -->
-  <div class="hero__content">
-
+  <div class="hero-content">
     <h1>Potencia automática para el desbroce profesional</h1>
+    <p>Maquinaria robusta diseñada para trabajos extremos en campo y zonas rurales.</p>
 
-    <p>
-      Maquinaria robusta diseñada para trabajos extremos en campo,
-      pendientes y zonas rurales.
-    </p>
-
-    <div class="hero__actions">
-      <a href="#contacto" class="btn btn--primary">Solicitar presupuesto</a>
-      <a href="#" id="btnWhatsapp" class="btn btn--secondary">WhatsApp directo</a>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn primary">Solicitar presupuesto</a>
+      <button id="whatsappBtn" class="btn secondary">WhatsApp directo</button>
     </div>
-
   </div>
 
 </section>
 
 <!-- PRODUCTOS -->
-<section class="section" id="productos">
+<section id="productos" class="section">
 
   <div class="container">
 
@@ -68,65 +54,26 @@
 
     <div class="products">
 
-      <!-- PRODUCTO 1 -->
-      <article class="product">
-        <div class="product__img img-azul-1"></div>
+      <div class="product">
+        <div class="product-img azul1"></div>
+        <h3>Modelo 80cm</h3>
+        <p>Compacta y eficiente para mantenimiento agrícola.</p>
+        <a href="#contacto" class="btn primary small">Pedir precio</a>
+      </div>
 
-        <div class="product__body">
-          <h4>PACMAQ 80cm PRO</h4>
-          <p class="product__desc">Compacta, rápida y eficiente.</p>
+      <div class="product">
+        <div class="product-img azul2"></div>
+        <h3>Modelo 100cm</h3>
+        <p>Equilibrio perfecto entre potencia y maniobrabilidad.</p>
+        <a href="#contacto" class="btn primary small">Pedir precio</a>
+      </div>
 
-          <ul class="product__specs">
-            <li>Ancho corte: 80cm</li>
-            <li>Uso agrícola</li>
-            <li>Bajo consumo</li>
-          </ul>
-
-          <div class="product__actions">
-            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUCTO 2 -->
-      <article class="product">
-        <div class="product__img img-azul-2"></div>
-
-        <div class="product__body">
-          <h4>PACMAQ 100cm MAX</h4>
-          <p class="product__desc">Potencia equilibrada profesional.</p>
-
-          <ul class="product__specs">
-            <li>Ancho corte: 100cm</li>
-            <li>Uso intensivo</li>
-            <li>Alta durabilidad</li>
-          </ul>
-
-          <div class="product__actions">
-            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- PRODUCTO 3 -->
-      <article class="product">
-        <div class="product__img img-azul-3"></div>
-
-        <div class="product__body">
-          <h4>PACMAQ 120cm ULTRA</h4>
-          <p class="product__desc">Máximo rendimiento extremo.</p>
-
-          <ul class="product__specs">
-            <li>Ancho corte: 120cm</li>
-            <li>Terreno duro</li>
-            <li>Uso industrial</li>
-          </ul>
-
-          <div class="product__actions">
-            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
-          </div>
-        </div>
-      </article>
+      <div class="product">
+        <div class="product-img azul3"></div>
+        <h3>Modelo 120cm</h3>
+        <p>Uso industrial para terrenos extremos.</p>
+        <a href="#contacto" class="btn primary small">Pedir precio</a>
+      </div>
 
     </div>
 
@@ -135,54 +82,29 @@
 </section>
 
 <!-- CONTACTO -->
-<section class="section section--alt" id="contacto">
+<section id="contacto" class="section dark">
 
-  <div class="container">
+  <div class="container contact">
 
-    <div class="contact">
-
-      <div>
-        <h2>Solicita presupuesto</h2>
-        <p>Contacta directamente o escríbenos por WhatsApp.</p>
-
-        <a href="#" id="btnWhatsapp2" class="btn btn--primary">
-          WhatsApp directo
-        </a>
-      </div>
-
-      <form class="form">
-
-        <div class="form__row">
-          <label>Nombre</label>
-          <input type="text" placeholder="Tu nombre">
-        </div>
-
-        <div class="form__row">
-          <label>Teléfono</label>
-          <input type="tel" placeholder="600 000 000">
-        </div>
-
-        <div class="form__row">
-          <label>Mensaje</label>
-          <textarea rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
-        </div>
-
-        <button class="btn btn--primary btn--full">Enviar</button>
-
-      </form>
-
+    <div>
+      <h2>Solicita presupuesto</h2>
+      <p>Contacta rápido por WhatsApp o deja tus datos.</p>
+      <button id="whatsappBtn2" class="btn primary">WhatsApp directo</button>
     </div>
+
+    <form>
+      <input type="text" placeholder="Nombre">
+      <input type="tel" placeholder="Teléfono">
+      <textarea placeholder="Mensaje"></textarea>
+      <button class="btn primary full">Enviar</button>
+    </form>
 
   </div>
 
 </section>
 
-</main>
-
 <footer class="footer">
-  <div class="container">
-    © 2026 GRAPPA — Maquinaria profesional
-  </div>
+  © 2026 GRAPPA — Maquinaria profesional
 </footer>
 
 <script src="script.js"></script>
