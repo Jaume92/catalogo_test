@@ -1,118 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PACMAQ | Desbrozadoras Automáticas</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <title>GRAPPA | Desbrozadoras Automáticas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="topbar">
-  <div class="container topbar__inner">
-    <div class="brand">
-  <img src="assets/images/logo.jpeg" alt="Logo" class="brand__img">
-</div>
+<!-- NAV -->
+<header class="site-header" id="top">
+  <div class="container nav-wrap">
 
-
-    <a class="btn btn--wa" target="_blank"
-      href="https://wa.me/34633897821?text=Hola,%20quiero%20información%20sobre%20sus%20desbrozadoras%20automáticas">
-      🟢 Pedidos por WhatsApp
+    <a class="brand" href="#">
+      <span class="brand__name">GRAPPA</span>
     </a>
+
+    <button class="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="navMenu">
+      <a class="nav__link is-active" href="#">INICIO</a>
+      <a class="nav__link" href="#empresa">EMPRESA</a>
+      <a class="nav__link" href="#productos">PRODUCTOS</a>
+      <a class="nav__link" href="#contacto">CONTACTO</a>
+      <a class="nav__cta" href="#contacto">PRESUPUESTO</a>
+    </nav>
+
   </div>
 </header>
 
+<main>
+
+<!-- HERO -->
 <section class="hero">
+
+  <!-- Fondo imagen -->
   <div class="hero__bg"></div>
-  <div class="container hero__content">
-    <h1>DESBROZADORAS<br>AUTOMÁTICAS</h1>
-    <p>Control remoto · Alto rendimiento · Trabajo en pendientes</p>
 
-    <a class="btn btn--cta" target="_blank"
-      href="https://wa.me/34633897821?text=Hola,%20quiero%20presupuesto%20para%20una%20desbrozadora%20automática">
-      Solicitar presupuesto por WhatsApp
-    </a>
+  <!-- Panel lateral -->
+  <div class="hero__content">
+
+    <h1>Potencia automática para el desbroce profesional</h1>
+
+    <p>
+      Maquinaria robusta diseñada para trabajos extremos en campo,
+      pendientes y zonas rurales.
+    </p>
+
+    <div class="hero__actions">
+      <a href="#contacto" class="btn btn--primary">Solicitar presupuesto</a>
+      <a href="#" id="btnWhatsapp" class="btn btn--secondary">WhatsApp directo</a>
+    </div>
+
   </div>
+
 </section>
 
-<main class="container">
-<section class="grid">
+<!-- PRODUCTOS -->
+<section class="section" id="productos">
 
-<!-- ================= ROJA ================= -->
+  <div class="container">
 
-<article class="card">
+    <h2 class="center">Nuestros modelos</h2>
 
-  <div class="slider">
-    <button class="arrow left" onclick="prevSlide('roja')">‹</button>
-    <img id="roja-img" src="assets/images/roja1.jpeg" alt="Robot desbrozadora roja">
-    <button class="arrow right" onclick="nextSlide('roja')">›</button>
+    <div class="products">
+
+      <!-- PRODUCTO 1 -->
+      <article class="product">
+        <div class="product__img img-azul-1"></div>
+
+        <div class="product__body">
+          <h4>PACMAQ 80cm PRO</h4>
+          <p class="product__desc">Compacta, rápida y eficiente.</p>
+
+          <ul class="product__specs">
+            <li>Ancho corte: 80cm</li>
+            <li>Uso agrícola</li>
+            <li>Bajo consumo</li>
+          </ul>
+
+          <div class="product__actions">
+            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 2 -->
+      <article class="product">
+        <div class="product__img img-azul-2"></div>
+
+        <div class="product__body">
+          <h4>PACMAQ 100cm MAX</h4>
+          <p class="product__desc">Potencia equilibrada profesional.</p>
+
+          <ul class="product__specs">
+            <li>Ancho corte: 100cm</li>
+            <li>Uso intensivo</li>
+            <li>Alta durabilidad</li>
+          </ul>
+
+          <div class="product__actions">
+            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 3 -->
+      <article class="product">
+        <div class="product__img img-azul-3"></div>
+
+        <div class="product__body">
+          <h4>PACMAQ 120cm ULTRA</h4>
+          <p class="product__desc">Máximo rendimiento extremo.</p>
+
+          <ul class="product__specs">
+            <li>Ancho corte: 120cm</li>
+            <li>Terreno duro</li>
+            <li>Uso industrial</li>
+          </ul>
+
+          <div class="product__actions">
+            <a href="#contacto" class="btn btn--primary">Pedir precio</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
   </div>
-
-  <div class="card__body">
-    <h3>Gama Grappa CL – Robot Desbrozadora Profesional</h3>
-    <div class="card__meta">
-      Orugas · Radiocontrol · Sistema híbrido · Terrenos exigentes
-    </div>
-
-    <div class="variants">
-      <button class="variant active" onclick="setModel('CL-800 (80cm)', 4300, this)">CL-800 · 80cm</button>
-      <button class="variant" onclick="setModel('CL-1000 (100cm)', 4500, this)">CL-1000 · 100cm</button>
-      <button class="variant" onclick="setModel('CL-1200 (120cm)', 4700, this)">CL-1200 · 120cm</button>
-    </div>
-
-    <div class="price" id="grappaPrice">
-      4300 € + IVA
-    </div>
-
-    <button class="btn btn--card" onclick="sendGrappa()">
-      Solicitar presupuesto
-    </button>
-  </div>
-
-</article>
-
-<!-- ================= AZUL ================= -->
-
-<article class="card">
-
-  <div class="slider">
-    <button class="arrow left" onclick="prevSlide('azul')">‹</button>
-    <img id="azul-img" src="assets/images/azul1.jpeg" alt="Robot desbrozadora azul">
-    <button class="arrow right" onclick="nextSlide('azul')">›</button>
-  </div>
-
-  <div class="card__body">
-    <h3>Desbrozadora Automática Azul Profesional</h3>
-    <div class="card__meta">
-      Corte 50cm · Control remoto · Uso agrícola intensivo
-    </div>
-
-    <div class="price">
-      2600 € + IVA
-    </div>
-
-    <button class="btn btn--card"
-      onclick="window.open('https://wa.me/34633897821?text=Hola,%20quiero%20información%20sobre%20la%20desbrozadora%20automática%20azul%20(2600€%20+%20IVA)','_blank')">
-      Solicitar presupuesto
-    </button>
-  </div>
-
-</article>
 
 </section>
+
+<!-- CONTACTO -->
+<section class="section section--alt" id="contacto">
+
+  <div class="container">
+
+    <div class="contact">
+
+      <div>
+        <h2>Solicita presupuesto</h2>
+        <p>Contacta directamente o escríbenos por WhatsApp.</p>
+
+        <a href="#" id="btnWhatsapp2" class="btn btn--primary">
+          WhatsApp directo
+        </a>
+      </div>
+
+      <form class="form">
+
+        <div class="form__row">
+          <label>Nombre</label>
+          <input type="text" placeholder="Tu nombre">
+        </div>
+
+        <div class="form__row">
+          <label>Teléfono</label>
+          <input type="tel" placeholder="600 000 000">
+        </div>
+
+        <div class="form__row">
+          <label>Mensaje</label>
+          <textarea rows="4" placeholder="Cuéntanos qué necesitas"></textarea>
+        </div>
+
+        <button class="btn btn--primary btn--full">Enviar</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
 </main>
 
 <footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__text">© 2026 PACMAQ · Maquinaria profesional</div>
-
-    <a class="btn btn--wa" target="_blank"
-      href="https://wa.me/34633897821?text=Hola,%20quiero%20hacer%20un%20pedido%20de%20una%20desbrozadora%20automática">
-      🟢 Hacer pedido
-    </a>
+  <div class="container">
+    © 2026 GRAPPA — Maquinaria profesional
   </div>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
