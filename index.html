@@ -18,16 +18,14 @@
 <header>
 <nav class="navbar">
 
-  <div class="logo">GRAPPA</div>
+  <div class="logo">
+    <img src="assets/images/logo1.jpeg" alt="Grappa Logo">
+  </div>
 
   <div class="nav-center">
     <a href="#hero">Inicio</a>
     <a href="#productos">Modelos</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-
-  <div class="nav-right">
-    <button class="btn-nav-primary">Solicitar Presupuesto</button>
+    <a href="javascript:void(0)" onclick="scrollToContact()">Contacto</a>
   </div>
 
 </nav>
@@ -55,8 +53,15 @@ uso continuo y máxima potencia.
 </p>
 
 <div class="hero-actions">
-<button class="btn-hero-main">Solicitar Presupuesto</button>
-<button class="btn-hero-secondary">Ver modelos</button>
+
+<button class="btn-hero-main" onclick="solicitarPresupuesto()">
+Solicitar Presupuesto
+</button>
+
+<button class="btn-hero-secondary" onclick="scrollToModels()">
+Ver modelos
+</button>
+
 </div>
 
 </div>
@@ -140,7 +145,6 @@ uso continuo y máxima potencia.
 <img class="product-slide slide-0 active" src="assets/images/roja1.jpeg">
 <img class="product-slide slide-0" src="assets/images/roja2.jpeg">
 
-
 <button class="arrow right" onclick="changeSlide(0,1)">❯</button>
 
 </div>
@@ -209,7 +213,7 @@ Ficha técnica
 </section>
 
 
-<!-- ================= MODAL SYSTEM (CORREGIDO) ================= -->
+<!-- ================= MODAL SYSTEM ================= -->
 
 <div id="modal-bg"></div>
 
@@ -232,30 +236,21 @@ Ficha técnica
     <li>Uso agrícola / industrial</li>
     <li>Garantía 12 meses</li>
   </ul>
-  <button type="button" class="btn-module" onclick="closeModal()">Cerrar</button>
+  <button class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
-
-<!-- ================= FOOTER SIMPLE ================= -->
-
-<footer id="contacto">
-<p>© 2026 Grappa Maquinaria · Equipamiento Profesional</p>
-</footer>
-
-
-<!-- ================= JS ================= -->
-
-<script src="script.js"></script>
 
 
 <!-- ================= FOOTER PRO ================= -->
 
-<footer class="footer-pro">
+<footer class="footer-pro" id="contacto">
 
 <div class="footer-container">
 
   <div class="footer-col brand">
 
-    <div class="footer-logo">GRAPPA</div>
+    <div class="logo">
+      <img src="assets/images/logo1.jpeg" alt="Grappa Logo">
+    </div>
 
     <p>
       Especialistas en maquinaria agrícola y forestal profesional.
@@ -286,10 +281,8 @@ Ficha técnica
     <h4>Información</h4>
     <ul>
       <li>📍 España</li>
-      <li>📞 +34 600 000 000</li>
-      <li>✉ info@desbrozadoras.com</li>
-      <li>🕒 Lun - Vie: 9:00 - 18:00</li>
-      <li>🕒 Sáb: 9:00 - 14:00</li>
+      <li>📞 +34 640837217</li>
+      <li>✉ info@grappamaquinaria.com</li>
     </ul>
   </div>
 
@@ -298,7 +291,6 @@ Ficha técnica
     <ul>
       <li>Garantía</li>
       <li>Mantenimiento</li>
-      <li>Descargas</li>
       <li>Contacto</li>
     </ul>
   </div>
@@ -311,5 +303,11 @@ Ficha técnica
 
 </footer>
 
+
+<!-- ================= JS ================= -->
+
+<script src="script.js"></script>
+
 </body>
 </html>
+

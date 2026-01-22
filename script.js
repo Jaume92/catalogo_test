@@ -36,9 +36,9 @@ function setModel(product, size, btn) {
 
   let price = "";
 
-  if (size === 80) price = "Desde 3.900€";
+  if (size === 80) price = "Desde 4200€";
   if (size === 100) price = "Desde 4.300€";
-  if (size === 120) price = "Desde 5.200€";
+  if (size === 120) price = "Desde 4.700€";
 
   const priceBox = document.getElementById(`price-${product}`);
 
@@ -104,3 +104,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+
+function solicitarPresupuesto() {
+
+  const mensaje = encodeURIComponent(
+    "Hola, estoy interesado en una desbrozadora automática GRAPPA. Quiero solicitar presupuesto."
+  );
+
+  const url = `https://wa.me/${34640837217}?text=${mensaje}`;
+
+  window.open(url, "_blank");
+}
+
+function scrollToModels() {
+  document.getElementById("productos").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+
+function scrollToContact() {
+  document.getElementById("contacto").scrollIntoView({
+    behavior: "smooth"
+  });
+}
