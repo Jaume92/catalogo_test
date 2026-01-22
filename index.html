@@ -73,6 +73,7 @@ uso continuo y máxima potencia.
 </div>
 
 </section>
+
 <!-- ================= FEATURES STRIP ================= -->
 
 <section class="features-strip">
@@ -124,8 +125,6 @@ uso continuo y máxima potencia.
 
 <section class="products" id="productos">
 
-
-
 <div class="products-grid">
 
 <!-- ===== MODELO ROJO ===== -->
@@ -159,7 +158,9 @@ uso continuo y máxima potencia.
 
 <p class="price" id="price-0">Desde 4.300€</p>
 
-<button class="btn-module" onclick="openModal('red')">Ficha técnica</button>
+<button type="button" class="btn-module" onclick="openModal('red')">
+Ficha técnica
+</button>
 
 </div>
 
@@ -195,8 +196,9 @@ uso continuo y máxima potencia.
 
 <p class="price">2.600€ + IVA</p>
 
-
-<button class="btn-module" onclick="openModal('blue')">Ficha técnica</button>
+<button type="button" class="btn-module" onclick="openModal('blue')">
+Ficha técnica
+</button>
 
 </div>
 
@@ -207,47 +209,33 @@ uso continuo y máxima potencia.
 </section>
 
 
-<!-- ================= MODAL ================= -->
+<!-- ================= MODAL SYSTEM (CORREGIDO) ================= -->
 
-<div id="modal-bg" class="modal-bg" onclick="closeModal()"></div>
+<div id="modal-bg"></div>
 
-<div id="modal-red" class="modal">
-
-<h2>Ficha Técnica · Modelo ROJO</h2>
-
-<ul>
-<li><b>Motor:</b> Koop 195 Diésel · 15 CV</li>
-<li><b>Arranque:</b> Eléctrico remoto</li>
-<li><b>Control remoto:</b> Industrial · 400 m</li>
-<li><b>Ancho corte:</b> 800 / 1000 / 1200 mm</li>
-<li><b>Altura corte:</b> 20 – 200 mm</li>
-<li><b>Peso:</b> 338 – 356 kg</li>
-</ul>
-
-<button class="close-btn" onclick="closeModal()">Cerrar</button>
-
+<div id="modal-red" class="modal" style="display:none;">
+  <h3>Ficha técnica - Modelo Rojo</h3>
+  <ul>
+    <li>Ancho de corte: 100cm</li>
+    <li>Motor diésel industrial</li>
+    <li>Uso intensivo</li>
+    <li>Garantía 12 meses</li>
+  </ul>
+  <button type="button" class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
 
-
-<div id="modal-blue" class="modal">
-
-<h2>Ficha Técnica · Modelo AZUL</h2>
-
-<ul>
-<li><b>Motor:</b> Loncin · 224cc gasolina</li>
-<li><b>Potencia:</b> 4.5 kW</li>
-<li><b>Control remoto:</b> 200 m</li>
-<li><b>Ancho corte:</b> 550 mm</li>
-<li><b>Altura corte:</b> 20 – 80 mm</li>
-<li><b>Pendiente:</b> 40°</li>
-</ul>
-
-<button class="close-btn" onclick="closeModal()">Cerrar</button>
-
+<div id="modal-blue" class="modal" style="display:none;">
+  <h3>Ficha técnica - Modelo Azul</h3>
+  <ul>
+    <li>Ancho de corte: 100cm</li>
+    <li>Motor profesional</li>
+    <li>Uso agrícola / industrial</li>
+    <li>Garantía 12 meses</li>
+  </ul>
+  <button type="button" class="btn-module" onclick="closeModal()">Cerrar</button>
 </div>
 
-
-<!-- ================= FOOTER ================= -->
+<!-- ================= FOOTER SIMPLE ================= -->
 
 <footer id="contacto">
 <p>© 2026 Grappa Maquinaria · Equipamiento Profesional</p>
@@ -259,11 +247,11 @@ uso continuo y máxima potencia.
 <script src="script.js"></script>
 
 
+<!-- ================= FOOTER PRO ================= -->
+
 <footer class="footer-pro">
 
 <div class="footer-container">
-
-  <!-- BRAND -->
 
   <div class="footer-col brand">
 
@@ -275,21 +263,16 @@ uso continuo y máxima potencia.
     </p>
 
     <div class="social-icons">
-      <a href="#" aria-label="LinkedIn">in</a>
-      <a href="#" aria-label="Instagram">ig</a>
-      <a href="#" aria-label="YouTube">yt</a>
-      <a href="#" aria-label="Facebook">fb</a>
+      <a href="#">in</a>
+      <a href="#">ig</a>
+      <a href="#">yt</a>
+      <a href="#">fb</a>
     </div>
 
   </div>
 
-
-  <!-- PRODUCTOS -->
-
   <div class="footer-col">
-
     <h4>Productos</h4>
-
     <ul>
       <li>Desbrozadoras 80cm</li>
       <li>Desbrozadoras 100cm</li>
@@ -297,16 +280,10 @@ uso continuo y máxima potencia.
       <li>Accesorios</li>
       <li>Repuestos</li>
     </ul>
-
   </div>
 
-
-  <!-- INFORMACION -->
-
   <div class="footer-col">
-
     <h4>Información</h4>
-
     <ul>
       <li>📍 España</li>
       <li>📞 +34 600 000 000</li>
@@ -314,40 +291,25 @@ uso continuo y máxima potencia.
       <li>🕒 Lun - Vie: 9:00 - 18:00</li>
       <li>🕒 Sáb: 9:00 - 14:00</li>
     </ul>
-
   </div>
 
-
-  <!-- SOPORTE -->
-
   <div class="footer-col">
-
     <h4>Soporte</h4>
-
     <ul>
       <li>Garantía</li>
       <li>Mantenimiento</li>
       <li>Descargas</li>
       <li>Contacto</li>
     </ul>
-
   </div>
 
 </div>
-
 
 <div class="footer-bottom">
 © 2026 Grappa Maquinaria · Todos los derechos reservados
 </div>
 
 </footer>
-
-
-
-
-
-
-
 
 </body>
 </html>
